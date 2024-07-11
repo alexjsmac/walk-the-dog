@@ -1,0 +1,21 @@
+<style>
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+</style>
+
+<main class="main">
+  <div id="ui"></div>
+  <canvas id="canvas" style="outline: none" tabindex="0" height="600" width="600">
+    Your browser does not support the Canvas.
+  </canvas>
+</main>
+
+<router-outlet />
