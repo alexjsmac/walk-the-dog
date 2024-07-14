@@ -24,8 +24,8 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "walk_the_dog_rust_bg.wasm",
-                "input": "src/app/pkg",
+                "glob": "wtd_rust_bg.wasm",
+                "input": "src/lib//wtd-rust/pkg",
                 "output": "."
               }
             ],

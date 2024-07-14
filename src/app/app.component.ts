@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import init, { start } from './pkg/walk_the_dog_rust.js';
+import init, { start } from '../lib/wtd-rust/pkg/wtd_rust.js';
 
 @Component({
   selector: 'app-root',
