@@ -7,3 +7,6 @@ node_modules/
 src/lib/wtd-rust/target/
 # Local Netlify folder
 .netlify
+
+.DS_Store
+src/.DS_Store
