@@ -27,6 +27,9 @@ jobs:
       - name: Clippy
         run: cargo clippy --all -- -D warnings
         working-directory: src/lib/wtd-rust
+      - name: WASM build
+        run: wasm-pack build --target web
+        working-directory: src/lib/wtd-rust
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
