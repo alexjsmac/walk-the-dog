@@ -5,3 +5,5 @@ dist/
 node_modules/
 .idea/
 src/lib/wtd-rust/target/
+# Local Netlify folder
+.netlify
