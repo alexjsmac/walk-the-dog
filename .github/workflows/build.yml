@@ -1,0 +1,28 @@
+name: Build
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Source code checkout
+        uses: actions/checkout@v4
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - name: Check
+        run: cargo check
+        working-directory: src/lib/wtd-rust
+      - name: Test
+        run: cargo test --all-targets
+        working-directory: src/lib/wtd-rust
+      - name: Format
+        run: cargo fmt --all -- --check
+        working-directory: src/lib/wtd-rust
+      - name: Clippy
+        run: cargo clippy --all -- -D warnings
+        working-directory: src/lib/wtd-rust
