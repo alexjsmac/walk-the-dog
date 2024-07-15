@@ -1,8 +1,8 @@
 use futures::channel::mpsc::UnboundedReceiver;
 
-use crate::{browser, engine};
 use crate::engine::{KeyState, Renderer};
-use crate::game::{TIMELINE_MINIMUM, Walk};
+use crate::game::{Walk, TIMELINE_MINIMUM};
+use crate::{browser, engine};
 
 pub enum WalkTheDogStateMachine {
     Ready(WalkTheDogState<Ready>),
