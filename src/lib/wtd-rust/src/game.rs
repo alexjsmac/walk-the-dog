@@ -2,15 +2,15 @@ use std::rc::Rc;
 
 use anyhow::{anyhow, Result};
 use async_trait::async_trait;
-use rand::{Rng, thread_rng};
+use rand::{thread_rng, Rng};
 use web_sys::HtmlImageElement;
 
-use crate::{browser, engine};
 use crate::engine::{Audio, Game, Image, KeyState, Point, Rect, Renderer, Sheet, SpriteSheet};
-use crate::obstacle::{Obstacle, rightmost};
+use crate::obstacle::{rightmost, Obstacle};
 use crate::rhb::RedHatBoy;
 use crate::segments::{platform_and_stone, stone_and_platform};
 use crate::wtd_state_machine::WalkTheDogStateMachine;
+use crate::{browser, engine};
 
 pub const HEIGHT: i16 = 600;
 pub const TIMELINE_MINIMUM: i16 = 1000;

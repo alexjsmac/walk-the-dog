@@ -1,6 +1,6 @@
 use anyhow::{anyhow, Result};
-use wasm_bindgen::{JsCast, JsValue};
 use wasm_bindgen::closure::{Closure, WasmClosure, WasmClosureFnOnce};
+use wasm_bindgen::{JsCast, JsValue};
 use wasm_bindgen_futures::js_sys::ArrayBuffer;
 use wasm_bindgen_futures::JsFuture;
 use web_sys::{Document, Element, HtmlElement, HtmlImageElement, Response, Window};

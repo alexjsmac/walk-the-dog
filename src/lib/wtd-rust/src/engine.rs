@@ -9,12 +9,12 @@ use futures::channel::mpsc::{unbounded, UnboundedReceiver};
 use futures::channel::oneshot::channel;
 use log::error;
 use serde::Deserialize;
-use wasm_bindgen::{JsCast, JsValue};
 use wasm_bindgen::closure::Closure;
+use wasm_bindgen::{JsCast, JsValue};
 use web_sys::{AudioBuffer, AudioContext, CanvasRenderingContext2d, HtmlElement, HtmlImageElement};
 
-use crate::{browser, sound};
 use crate::browser::LoopClosure;
+use crate::{browser, sound};
 
 #[derive(Deserialize, Clone)]
 pub struct SheetRect {
